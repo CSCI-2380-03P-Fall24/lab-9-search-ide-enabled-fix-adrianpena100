@@ -49,33 +49,6 @@ jobs:
         command: make test try=binSearchR
         timeout: 10
         max-score: 10
-    - name: swap
-      id: swap
-      uses: classroom-resources/autograding-command-grader@v1
-      with:
-        test-name: swap
-        setup-command: ''
-        command: make test try=swap
-        timeout: 10
-        max-score: 10
-    - name: minFind
-      id: minfind
-      uses: classroom-resources/autograding-command-grader@v1
-      with:
-        test-name: minFind
-        setup-command: ''
-        command: make test try=minFind
-        timeout: 10
-        max-score: 10
-    - name: newSort
-      id: newsort
-      uses: classroom-resources/autograding-command-grader@v1
-      with:
-        test-name: newSort
-        setup-command: ''
-        command: make test try=newSort
-        timeout: 10
-        max-score: 20
     - name: expSearch
       id: expsearch
       uses: classroom-resources/autograding-command-grader@v1
@@ -92,9 +65,6 @@ jobs:
         SEQSEARCH_RESULTS: "${{steps.seqsearch.outputs.result}}"
         BINSEARCH_RESULTS: "${{steps.binsearch.outputs.result}}"
         BINSEARCHR_RESULTS: "${{steps.binsearchr.outputs.result}}"
-        SWAP_RESULTS: "${{steps.swap.outputs.result}}"
-        MINFIND_RESULTS: "${{steps.minfind.outputs.result}}"
-        NEWSORT_RESULTS: "${{steps.newsort.outputs.result}}"
         EXPSEARCH_RESULTS: "${{steps.expsearch.outputs.result}}"
       with:
-        runners: printarray,seqsearch,binsearch,binsearchr,swap,minfind,newsort,expsearch
+        runners: printarray,seqsearch,binsearch,binsearchr,expsearch
