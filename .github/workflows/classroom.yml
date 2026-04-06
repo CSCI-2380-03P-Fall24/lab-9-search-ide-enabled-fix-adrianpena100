@@ -21,7 +21,7 @@ jobs:
         setup-command: ''
         command: make test try=printArray
         timeout: 10
-        max-score: 10
+        max-score: 20
     - name: seqSearch
       id: seqsearch
       uses: classroom-resources/autograding-command-grader@v1
@@ -30,7 +30,7 @@ jobs:
         setup-command: ''
         command: make test try=seqSearch
         timeout: 10
-        max-score: 10
+        max-score: 20
     - name: binSearch
       id: binsearch
       uses: classroom-resources/autograding-command-grader@v1
@@ -39,7 +39,7 @@ jobs:
         setup-command: ''
         command: make test try=binSearch
         timeout: 10
-        max-score: 10
+        max-score: 20
     - name: binSearchR
       id: binsearchr
       uses: classroom-resources/autograding-command-grader@v1
@@ -48,7 +48,7 @@ jobs:
         setup-command: ''
         command: make test try=binSearchR
         timeout: 10
-        max-score: 10
+        max-score: 20
     - name: expSearch
       id: expsearch
       uses: classroom-resources/autograding-command-grader@v1
